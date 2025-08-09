@@ -1,8 +1,7 @@
-import { FunctionHandler } from "./types";
+import { FunctionHandler } from "../../interfaces";
 
-const functions: FunctionHandler[] = [];
 
-functions.push({
+export const getWeatherFromCoords: FunctionHandler = {
   schema: {
     name: "get_weather_from_coords",
     type: "function",
@@ -28,6 +27,6 @@ functions.push({
     const currentTemp = data.current?.temperature_2m;
     return JSON.stringify({ temp: currentTemp });
   },
-});
+};
 
-export default functions;
+

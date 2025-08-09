@@ -61,6 +61,7 @@ export default function ChecklistAndConfig({
 
         // 2. Fetch numbers
         res = await fetch("/api/twilio/numbers");
+        console.log("Fetched phone numbers:", res);
         if (!res.ok) throw new Error("Failed to fetch phone numbers");
         const numbersData = await res.json();
         if (Array.isArray(numbersData) && numbersData.length > 0) {

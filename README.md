@@ -100,6 +100,9 @@ ngrok http 8081
 
 Make note of the `Forwarding` URL. (e.g. `https://54c5-35-170-32-42.ngrok-free.app`)
 
+cloudflared tunnel --url http://localhost:8081
+
+
 ### Websocket URL
 
 Your server should now be accessible at the `Forwarding` URL when run, so set the `PUBLIC_URL` in `websocket-server/.env`. See `websocket-server/.env.example` for reference.
@@ -107,3 +110,5 @@ Your server should now be accessible at the `Forwarding` URL when run, so set th
 # Additional Notes
 
 This repo isn't polished, and the security practices leave some to be desired. Please only use this as reference, and make sure to audit your app with security and engineering before deploying!
+
+
